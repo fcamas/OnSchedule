@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 
 public class NailsCreateActivity extends AppCompatActivity {
     private Button mSaveButton;
@@ -12,6 +13,9 @@ public class NailsCreateActivity extends AppCompatActivity {
     private CheckBox mS2;
     private CheckBox mS3;
     private CheckBox mS4;
+    private EditText mFullName;
+    private EditText mEmail;
+    private EditText mPhoneNumber;
 
 
     @Override
