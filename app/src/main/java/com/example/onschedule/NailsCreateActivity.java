@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 public class NailsCreateActivity extends AppCompatActivity {
     private Button mSaveButton;
@@ -16,6 +17,9 @@ public class NailsCreateActivity extends AppCompatActivity {
     private EditText mFullName;
     private EditText mEmail;
     private EditText mPhoneNumber;
+    private EditText mTime;
+    private RadioButton mRadioam;
+    private RadioButton mRadiopm;
 
 
     @Override
