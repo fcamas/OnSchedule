@@ -20,5 +20,17 @@
         android:id="@+id/recycle_view"
         android:layout_below="@id/textview"
         android:nestedScrollingEnabled="true"/>
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-14dp"
+        android:layout_gravity="bottom"
+        android:backgroundTint="#4066E0"
+        android:text="Create Appointment"
+        android:textColor="@color/white"
+        />
 
 </RelativeLayout>
