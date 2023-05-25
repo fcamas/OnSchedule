@@ -97,6 +97,13 @@
         android:hint="12:00"
         android:inputType="time"
         app:layout_constraintStart_toStartOf="parent" />
+    <RadioButton
+        android:id="@+id/radio_am"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:buttonTint="@color/black"
+        android:checked="true"
+        android:text="am" />
 
 
 
