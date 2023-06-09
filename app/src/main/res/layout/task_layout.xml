@@ -45,6 +45,15 @@
             android:layout_below="@id/cell_phone"
             android:text="12:pm"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        <TextView
+            android:id="@+id/cell_service"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_below="@id/cell_time"
+            android:text="- - - -"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
