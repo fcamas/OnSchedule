@@ -53,6 +53,17 @@
             android:layout_below="@id/cell_time"
             android:text="- - - -"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cell_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cell_service"
+            android:background="#F9B4F6"
+            android:buttonTint="@color/white"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="$99.99"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 
