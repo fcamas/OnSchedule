@@ -16,6 +16,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerview;
+    private NailDBHelper dbHelper;
+    private List<NailModel> mList;
+    private NailAdapter mAdapter;
     private Button nextActivity;
 
     @Override
