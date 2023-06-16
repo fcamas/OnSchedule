@@ -24,4 +24,9 @@ public class NailDBHelper {
         db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT , " +
                 "FULLNAME TEXT,EMAIL TEXT,PHONE TEXT,TIME TEXT, SERVICE TEXT, TASK TEXT, STATUS INTEGER)");
     }
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(db);
+    }
 }
