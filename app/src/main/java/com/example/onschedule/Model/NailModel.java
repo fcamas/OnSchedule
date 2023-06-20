@@ -9,4 +9,11 @@ public class NailModel {
     private String service;
     private String task;
     private int status;
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 }
