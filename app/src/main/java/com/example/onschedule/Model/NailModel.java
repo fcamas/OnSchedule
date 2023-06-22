@@ -9,7 +9,7 @@ public class NailModel {
     private String service;
     private String task;
     private int status;
-    
+
     public String getFullName() {
         return fullName;
     }
@@ -18,5 +18,8 @@ public class NailModel {
     }
     public String getEmail() {
         return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
