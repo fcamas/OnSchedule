@@ -25,4 +25,7 @@ public class NailModel {
     public String getPhone() {
         return phone;
     }
+    public void setTime(String time) {
+        this.time = time;
+    }
 }
