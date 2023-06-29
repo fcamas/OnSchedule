@@ -34,4 +34,7 @@ public class NailModel {
     public void setService(String service) {
         this.service = service;
     }
+    public int getId() {
+        return id;
+    }
 }
