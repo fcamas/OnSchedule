@@ -46,4 +46,7 @@ public class NailModel {
     public void setStatus(int status) {
         this.status = status;
     }
+    public String getTask() {
+        return task;
+    }
 }
