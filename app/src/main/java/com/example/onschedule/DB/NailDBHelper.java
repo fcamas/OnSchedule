@@ -6,7 +6,11 @@ import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
+import com.example.onschedule.Model.NailModel;
+
 public class NailDBHelper {
+
+    private SQLiteDatabase db;
     private static  final String DATABASE_NAME = "NAIL_DATABASE";
     private static  final String TABLE_NAME = "NAIL_TABLE";
     private static  final String COL_1 = "ID";
@@ -30,6 +34,17 @@ public class NailDBHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
-
+    public void insertTask(NailModel nailModel){
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_2 , nailModel.getFullName());
+        values.put(COL_3,  nailModel.getEmail());
+        values.put(COL_4,  nailModel.getPhone());
+        values.put(COL_5,  nailModel.getTime());
+        values.put(COL_6,  nailModel.getService());
+        values.put(COL_7,  nailModel.getTask());
+        values.put(COL_8 , 0);
+        db.insert(TABLE_NAME , null , values);
+    }
 
 }
