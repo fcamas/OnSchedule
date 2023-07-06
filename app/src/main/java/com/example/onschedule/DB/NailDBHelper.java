@@ -46,5 +46,11 @@ public class NailDBHelper {
         values.put(COL_8 , 0);
         db.insert(TABLE_NAME , null , values);
     }
+    public void updateStatus(int id , int status){
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_8, status);
+        db.update(TABLE_NAME , values , "ID=?" , new String[]{String.valueOf(id)});
+    }
 
 }
