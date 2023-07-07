@@ -52,5 +52,9 @@ public class NailDBHelper {
         values.put(COL_8, status);
         db.update(TABLE_NAME , values , "ID=?" , new String[]{String.valueOf(id)});
     }
+    public void deleteTask(int id ){
+        db = this.getWritableDatabase();
+        db.delete(TABLE_NAME , "ID=?" , new String[]{String.valueOf(id)});
+    }
 
 }
