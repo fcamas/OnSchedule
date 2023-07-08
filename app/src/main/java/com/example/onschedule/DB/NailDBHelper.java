@@ -2,11 +2,15 @@ package com.example.onschedule.DB;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
 import com.example.onschedule.Model.NailModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NailDBHelper {
 
@@ -55,6 +59,17 @@ public class NailDBHelper {
     public void deleteTask(int id ){
         db = this.getWritableDatabase();
         db.delete(TABLE_NAME , "ID=?" , new String[]{String.valueOf(id)});
+    }
+
+    public List<NailModel> getAllTasks(){
+
+        db = this.getWritableDatabase();
+        Cursor cursor = null;
+        List<NailModel> modelList = new ArrayList<>();
+
+        db.beginTransaction();
+      
+        return modelList;
     }
 
 }
