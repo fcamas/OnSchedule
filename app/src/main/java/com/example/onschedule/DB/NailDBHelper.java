@@ -68,7 +68,18 @@ public class NailDBHelper {
         List<NailModel> modelList = new ArrayList<>();
 
         db.beginTransaction();
-      
+        try {
+            cursor = db.query(TABLE_NAME , null , null , null , null , null , null);
+            if (cursor !=null){
+                if (cursor.moveToFirst()){
+                    do {
+                    }while (cursor.moveToNext());
+                }
+            }
+        }finally {
+            db.endTransaction();
+            cursor.close();
+        }
         return modelList;
     }
 
