@@ -73,6 +73,16 @@ public class NailDBHelper {
             if (cursor !=null){
                 if (cursor.moveToFirst()){
                     do {
+                        NailModel nailModel = new NailModel();
+                        nailModel.setId(cursor.getInt(cursor.getColumnIndex(COL_1)));
+                        nailModel.setFullName(cursor.getString(cursor.getColumnIndex(COL_2)));
+                        nailModel.setEmail(cursor.getString(cursor.getColumnIndex(COL_3)));
+                        nailModel.setPhone(cursor.getString(cursor.getColumnIndex(COL_4)));
+                        nailModel.setTime(cursor.getString(cursor.getColumnIndex(COL_5)));
+                        nailModel.setService(cursor.getString(cursor.getColumnIndex(COL_6)));
+                        nailModel.setTask(cursor.getString(cursor.getColumnIndex(COL_7)));
+                        nailModel.setStatus(cursor.getInt(cursor.getColumnIndex(COL_8)));
+                        modelList.add(nailModel);
                     }while (cursor.moveToNext());
                 }
             }
