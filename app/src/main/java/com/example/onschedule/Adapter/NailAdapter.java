@@ -11,4 +11,9 @@ public class NailAdapter {
     private MainActivity mActivity;
     private NailDBHelper nailHelper;
 
+    public NailAdapter(NailDBHelper nailHelper, MainActivity mActivity){
+        this.mActivity = mActivity;
+        this.nailHelper = nailHelper;
+    }
+
 }
