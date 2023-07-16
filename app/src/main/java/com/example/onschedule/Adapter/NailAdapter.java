@@ -49,4 +49,8 @@ public class NailAdapter {
             }
         });
     }
+
+    public boolean toBoolean(int num){
+        return num!=0;
+    }
 }
