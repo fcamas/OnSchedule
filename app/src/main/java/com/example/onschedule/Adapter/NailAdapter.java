@@ -1,5 +1,6 @@
 package com.example.onschedule.Adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,5 +53,8 @@ public class NailAdapter {
 
     public boolean toBoolean(int num){
         return num!=0;
+    }
+    public Context getContext(){
+        return mActivity;
     }
 }
