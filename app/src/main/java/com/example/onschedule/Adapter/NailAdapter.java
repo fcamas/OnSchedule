@@ -57,4 +57,9 @@ public class NailAdapter {
     public Context getContext(){
         return mActivity;
     }
+
+    public void setTasks(List<NailModel> mList){
+        this.mList = mList;
+        notifyDataSetChanged();
+    }
 }
