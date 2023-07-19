@@ -62,4 +62,11 @@ public class NailAdapter {
         this.mList = mList;
         notifyDataSetChanged();
     }
+
+    public void deletTask(int position){
+        NailModel item = mList.get(position);
+        nailHelper.deleteTask(item.getId());
+        mList.remove(position);
+        notifyItemRemoved(position);
+    }
 }
