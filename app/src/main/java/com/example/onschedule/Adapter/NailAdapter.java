@@ -1,6 +1,7 @@
 package com.example.onschedule.Adapter;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,5 +69,12 @@ public class NailAdapter {
         nailHelper.deleteTask(item.getId());
         mList.remove(position);
         notifyItemRemoved(position);
+    }
+    public void editItem(int position){
+        NailModel item = mList.get(position);
+
+        Bundle bundle = new Bundle();
+        bundle.putInt("id" , item.getId());
+        bundle.putString("task" , item.getTask());
     }
 }
