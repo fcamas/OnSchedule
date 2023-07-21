@@ -77,4 +77,8 @@ public class NailAdapter {
         bundle.putInt("id" , item.getId());
         bundle.putString("task" , item.getTask());
     }
+    @Override
+    public int getItemCount() {
+        return mList.size();
+    }
 }
