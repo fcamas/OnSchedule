@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.onschedule.DB.NailDBHelper;
 import com.example.onschedule.MainActivity;
@@ -80,5 +83,22 @@ public class NailAdapter {
     @Override
     public int getItemCount() {
         return mList.size();
+    }
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
+        CheckBox mCheckBox;
+        TextView mFullName;
+        TextView mEmail;
+        TextView mPhone;
+        TextView mTime;
+        TextView mService;
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
+            mCheckBox = itemView.findViewById(R.id.cell_checkbox);
+            mFullName = itemView.findViewById(R.id.cell_fullname);
+            mEmail = itemView.findViewById(R.id.cell_email);
+            mPhone = itemView.findViewById(R.id.cell_phone);
+            mTime = itemView.findViewById(R.id.cell_time);
+            mService = itemView.findViewById(R.id.cell_service);
+        }
     }
 }
