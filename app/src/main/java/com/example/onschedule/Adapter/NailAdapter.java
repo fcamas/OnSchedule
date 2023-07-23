@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.onschedule.DB.NailDBHelper;
 import com.example.onschedule.MainActivity;
 import com.example.onschedule.Model.NailModel;
+import com.example.onschedule.R;
 
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class NailAdapter {
     private MainActivity mActivity;
     private NailDBHelper nailHelper;
 
-    public NailAdapter(NailDBHelper nailHelper, MainActivity mActivity){
+    public class NailAdapter extends RecyclerView.Adapter<NailAdapter.MyViewHolder> {
         this.mActivity = mActivity;
         this.nailHelper = nailHelper;
     }

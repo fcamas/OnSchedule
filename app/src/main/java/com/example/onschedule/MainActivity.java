@@ -10,6 +10,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.onschedule.Adapter.NailAdapter;
+import com.example.onschedule.DB.NailDBHelper;
+import com.example.onschedule.Model.NailModel;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
