@@ -30,8 +30,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mRecyclerview = findViewById(R.id.recycle_view);
+        dbHelper = new NailDBHelper(MainActivity.this);
+        mList = new ArrayList<>();
+        mAdapter = new NailAdapter(dbHelper, MainActivity.this);
+
         mRecyclerview.setHasFixedSize(true);
         mRecyclerview.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerview.setAdapter(mAdapter);
+        nextActivity = findViewById(R.id.btn_create);
+
+        mList = dbHelper.getAllTasks();
+        Collections.reverse(mList);
+        mAdapter.setTasks(mList);
 
         nextActivity.setOnClickListener(new View.OnClickListener() {
             @Override
