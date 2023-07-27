@@ -54,7 +54,17 @@ public class NailsCreateActivity extends AppCompatActivity {
                 String phoneNumber = mPhoneNumber.getText().toString();
                 String service = getService(mS1,mS2,mS3,mS4);
                 String myTime = getTime(mTime,mRadioam,mRadiopm);
-                
+                if (!fullName.equals("")) {
+                    NailModel item = new NailModel();
+                    item.setFullName(fullName);
+                    item.setEmail(email);
+                    item.setPhone(phoneNumber);
+                    item.setService(service);
+                    item.setTask(text);
+                    item.setStatus(0);
+                    item.setTime(myTime);
+                    nailDBHelper.insertTask(item);
+                }
                 Intent intent = new Intent(NailCreateActivity.this, MainActivity.class);
                 startActivity(intent);
 
