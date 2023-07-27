@@ -33,5 +33,14 @@ public class NailsCreateActivity extends AppCompatActivity {
         mS2 = findViewById(R.id.s_2);
         mS3 = findViewById(R.id.s_3);
         mS4 = findViewById(R.id.s_4);
+
+        nailDBHelper = new NailDBHelper(NailCreateActivity.this);
+        mSaveButton = findViewById(R.id.btn_finish);
+        mFullName = findViewById(R.id.txt_full_name);
+        mEmail = findViewById(R.id.txt_email);
+        mPhoneNumber = findViewById((R.id.txt_phone));
+        mTime = findViewById(R.id.txt_time);
+        mRadioam = findViewById(R.id.radio_am);
+        mRadiopm = findViewById((R.id.radio_pm));
     }
 }
