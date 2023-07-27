@@ -2,7 +2,9 @@ package com.example.onschedule;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -42,5 +44,21 @@ public class NailsCreateActivity extends AppCompatActivity {
         mTime = findViewById(R.id.txt_time);
         mRadioam = findViewById(R.id.radio_am);
         mRadiopm = findViewById((R.id.radio_pm));
+
+        mSaveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String text = calculatePrice(mS1,mS2,mS3,mS4);
+                String fullName = mFullName.getText().toString();
+                String  email = mEmail.getText().toString();
+                String phoneNumber = mPhoneNumber.getText().toString();
+                String service = getService(mS1,mS2,mS3,mS4);
+                String myTime = getTime(mTime,mRadioam,mRadiopm);
+                
+                Intent intent = new Intent(NailCreateActivity.this, MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 }
