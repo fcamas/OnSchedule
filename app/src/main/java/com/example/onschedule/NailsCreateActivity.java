@@ -71,4 +71,20 @@ public class NailsCreateActivity extends AppCompatActivity {
             }
         });
     }
+    private String getService(CheckBox mS1, CheckBox mS2, CheckBox mS3, CheckBox mS4) {
+        String result = "";
+        if(mS1.isChecked()){
+            result += "mr  ";
+        }
+        if(mS2.isChecked()){
+            result += "mj  ";
+        }
+        if(mS3.isChecked()){
+            result += "pr  ";
+        }
+        if(mS4.isChecked()){
+            result += "pj  ";
+        }
+        return result;
+    }
 }
