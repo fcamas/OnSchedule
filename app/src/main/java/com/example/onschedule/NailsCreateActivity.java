@@ -87,4 +87,23 @@ public class NailsCreateActivity extends AppCompatActivity {
         }
         return result;
     }
+    private String calculatePrice(CheckBox mS1, CheckBox mS2, CheckBox mS3, CheckBox mS4){
+
+        double  total = 0.00;
+        if(mS1.isChecked()){
+            total += 35;
+        }
+        if(mS2.isChecked()){
+            total += 75;
+        }
+        if(mS3.isChecked()){
+            total += 55;
+        }
+        if(mS4.isChecked()){
+            total += 100;
+        }
+        String result ="$ ";
+        result += (Double.toString(total));
+        return result;
+    }
 }
