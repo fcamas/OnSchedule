@@ -106,4 +106,16 @@ public class NailsCreateActivity extends AppCompatActivity {
         result += (Double.toString(total));
         return result;
     }
+
+    private String getTime(EditText mTime, RadioButton mRadioam, RadioButton mRadiopm){
+
+        String result = mTime.getText().toString();
+
+        if (mRadioam.isChecked()){
+            result += " am";
+        } else {
+            result += " pm";
+        }
+        return  result;
+    }
 }
