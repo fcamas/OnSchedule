@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 
 import com.example.onschedule.DB.NailDBHelper;
+import com.example.onschedule.Model.NailModel;
 
 public class NailsCreateActivity extends AppCompatActivity {
     private Button mSaveButton;
